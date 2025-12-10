@@ -1,6 +1,10 @@
 import { useState } from 'react';
 import { motion } from 'motion/react';
 import { VideoPlayer } from './VideoPlayer';
+import { ChevronRight } from "lucide-react";
+import { ChevronLeft } from "lucide-react";
+
+
 
 interface Episode {
   id: number;
@@ -19,24 +23,38 @@ interface Project {
 }
 
 const projects: Project[] = [
-  {
+      {
     id: 1,
+    title: "Equity Risk Score Audit",
+    thumbnail: "https://i.ibb.co/zW56kvDm/Screenshot-2025-12-09-at-11-48-05-PM.png",
+    videoUrl: "https://www.youtube.com/embed/zhtNhcqTih0",
+    description: "Multi-Modal ML for Risk Score Assessment"
+  },
+    {
+    id: 2,
+    title: "Pose Data Visulization",
+    thumbnail: "https://i.ibb.co/0yb7K8Lf/Screenshot-2025-12-09-at-10-47-12-PM.png",
+    videoUrl: "https://www.youtube.com/embed/Wen5lScIwGM",
+    description: "Real time 3D Pose Estimation and AI Data Metrics"
+  },
+  {
+    id: 3,
     title: "Salesforce AI Engine",
     thumbnail: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=600&fit=crop",
     videoUrl: "https://www.youtube.com/embed/q_R21nKuFo8",
     description: "Automated promotion setup, prediction, and recommendation"
   },
   {
-    id: 2,
+    id: 4,
     title: "Fitify",
-    thumbnail: "https://i.ibb.co/N6jzxXLG/image.jpg",
+    thumbnail: "https://i.ibb.co/Txmp0Tkr/Screenshot-2025-12-09-at-5-07-31-PM.png",
     videoUrl: "https://www.youtube.com/embed/qHhgaujFGtE",
     description: "AI Powered Fashion App"
   },
   {
-    id: 3,
+    id: 5,
     title: "AI/ML/Robotics",
-    thumbnail: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=400&h=600&fit=crop",
+    thumbnail: "https://i.imghippo.com/files/kSm7983zXo.jpg",
     description: "4 Episodes",
     episodes: [
       {
@@ -64,15 +82,40 @@ const projects: Project[] = [
         videoUrl: "https://www.youtube.com/embed/ZTdhinERBz0"
       }
     ]
+  },
+  {
+    id: 6,
+    title: "iReflect",
+    thumbnail: "https://i.ibb.co/jkB9Kh1m/forrestmirror.png",
+    videoUrl: "https://www.youtube.com/embed/jc4m_DrqxCA",
+    description: "AI and Design"
   }
 ];
 
 export function ProjectsSection() {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
+  // ⭐ NEW: State to control arrow visibility
+  const [showLeft, setShowLeft] = useState(false);
+  const [showRight, setShowRight] = useState(true);
+
+  // ⭐ NEW: Listen to scrolling to toggle arrows
+  const handleScroll = () => {
+    const container = document.getElementById("projects-scroll");
+    if (!container) return;
+
+    const atStart = container.scrollLeft === 0;
+    const atEnd =
+      container.scrollWidth - container.clientWidth - container.scrollLeft < 5;
+
+    setShowLeft(!atStart);
+    setShowRight(!atEnd);
+  };
+
   return (
     <>
       <div id="projects-section" className="py-20 px-8 relative">
+
         <motion.h2
           className="text-4xl text-white mb-8 tracking-wider"
           initial={{ opacity: 0, x: -20 }}
@@ -80,10 +123,47 @@ export function ProjectsSection() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          Top 3 Projects Today
+          Top 10 Projects Today
         </motion.h2>
 
-        <div className="flex gap-6 overflow-x-auto pb-4 scrollbar-hide">
+        {/* ⭐ LEFT ARROW — only shows after first scroll */}
+        {showLeft && (
+          <button
+            onClick={() => {
+              const container = document.getElementById("projects-scroll");
+              if (container) container.scrollBy({ left: -400, behavior: "smooth" });
+            }}
+            className="absolute left-4 top-1/2 -translate-y-1/2 z-20
+                       w-14 h-14 bg-white/10 hover:bg-white/20 backdrop-blur-md
+                       rounded-full flex items-center justify-center
+                       transition-all hover:scale-110 border border-white/20 shadow-lg"
+          >
+            <ChevronLeft className="w-8 h-8 text-white" />
+          </button>
+        )}
+
+        {/* ⭐ RIGHT ARROW — hides when reaching end */}
+        {showRight && (
+          <button
+            onClick={() => {
+              const container = document.getElementById("projects-scroll");
+              if (container) container.scrollBy({ left: 400, behavior: "smooth" });
+            }}
+            className="absolute right-4 top-1/2 -translate-y-1/2 z-20
+                       w-14 h-14 bg-white/10 hover:bg-white/20 backdrop-blur-md
+                       rounded-full flex items-center justify-center
+                       transition-all hover:scale-110 border border-white/20 shadow-lg"
+          >
+            <ChevronRight className="w-8 h-8 text-white" />
+          </button>
+        )}
+
+        {/* ⭐ Add onScroll listener */}
+        <div
+          id="projects-scroll"
+          onScroll={handleScroll}
+          className="flex gap-6 overflow-x-auto pb-4 scrollbar-hide scroll-smooth"
+        >
           {projects.map((project, index) => (
             <motion.div
               key={project.id}
@@ -94,14 +174,13 @@ export function ProjectsSection() {
               transition={{ delay: index * 0.1, duration: 0.5 }}
               onClick={() => setSelectedProject(project)}
             >
-              {/* Movie Poster */}
               <div className="relative w-96 h-56 rounded-lg overflow-hidden shadow-2xl">
                 <img
                   src={project.thumbnail}
                   alt={project.title}
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
-                {/* Overlay on hover */}
+
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
                   <div>
                     <h3 className="text-white text-xl mb-2">{project.title}</h3>
@@ -112,9 +191,20 @@ export function ProjectsSection() {
             </motion.div>
           ))}
         </div>
+          <motion.p
+          className="text-gray-500 mt-16 text-sm tracking-wider relative z-10"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.8 }}
+        >
+          Click a project to watch. 
+          Scroll to view more.
+        </motion.p>
       </div>
 
-      {/* Video Player Modal */}
+      {/* Modal */}
+
+      
       {selectedProject && (
         <VideoPlayer
           project={selectedProject}

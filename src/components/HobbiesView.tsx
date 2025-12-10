@@ -19,22 +19,22 @@ const hobbies: Hobby[] = [
     description: "Exploring the world one destination at a time",
     images: [
       "https://i.ibb.co/hFBgc1RY/1-E1-F44-A0-8-E9-D-4983-832-F-A5-A1-C5-A32-A3-D-1-105-c.jpg",
-      "https://i.ibb.co/0y2ss9dK/2-CAE3-A91-44-E0-44-B9-8699-3845962893-B4-1-105-c.jpg",
+
       "https://i.ibb.co/tPvtnLmB/2-D98-C2-B1-3144-4653-92-A1-A34-A859-E99-AC-4-5005-c.jpg",
-      "https://i.ibb.co/PGcfv2Sj/4-AA10-CC1-E913-4104-A44-C-A29-FBE7-A40-B9-1-105-c.jpg",
+
       "https://i.ibb.co/W8J6vNM/6-C664385-C62-F-4-C1-E-935-C-E52320-A1-B879-4-5005-c.jpg",
       "https://i.ibb.co/mrwcDj0z/6-E7728-A4-EFBB-487-A-BCFE-115-B6-A195-F6-B-1-105-c.jpg",
       "https://i.ibb.co/mVQ6gTrC/07-EF7-BC5-6-EF8-4178-8-DD9-B951704460-BB-1-105-c.jpg",
       "https://i.ibb.co/FkWMNDKV/30-FAA7-DF-38-C7-4-B17-B53-D-68-D027973-F34-1-105-c.jpg",
-      "https://i.ibb.co/q36NGjZX/73-C02979-C8-FD-40-DA-9-C13-8645-DFE87-B0-C-4-5005-c.jpg",
+  
       "https://i.ibb.co/BVGMX0S1/90-CADB7-E-5286-4035-9-F21-A4-C47-B701-DD4-1-105-c.jpg",
       "https://i.ibb.co/LdFkv9xh/360-F6-F31-31-EA-41-B1-A64-E-36370136-E442-1-105-c.jpg",
-      "https://i.ibb.co/SD3frbn7/468-D9711-D995-4-A92-99-CB-03256-F126862-1-105-c.jpg",
+
       "https://i.ibb.co/zhhZ8TXZ/6963-CB39-832-B-4-D5-A-BDB0-CE3732365-B4-C-1-105-c.jpg",
       "https://i.ibb.co/0Rv2PBgG/35685-D79-5080-4-FA6-8-C1-F-3-AA0-A06-C2777-1-105-c.jpg",
-      "https://i.ibb.co/0jvKQnFt/240808-B0-B6-B2-438-D-BDDA-1-B81-F330-EFED-4-5005-c.jpg",
+
       "https://i.ibb.co/zW0cmSpH/458271-E4-2877-41-D9-81-D4-722-F47-C4-A2-CC-1-105-c.jpg",
-      "https://i.ibb.co/RXFZtL2/B98-A7913-7-B56-4418-9-F65-B016557-DC69-A-4-5005-c.jpg",
+
       "https://i.ibb.co/N22swSS4/E8-D5-FEEA-70-FE-4-E6-D-B97-B-ED9-A9-AAE6603-1-105-c.jpg"
     ]
   },
@@ -56,29 +56,29 @@ const hobbies: Hobby[] = [
   {
     id: 3,
     title: "Music",
-    thumbnail: "https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=600&h=600&fit=crop",
+    thumbnail: "https://i.ibb.co/BVFDm491/076-F6088-A438-4-CC8-A1-F3-DBBCDBCE9-C3-F-4-5005-c.jpg",
     description: "Live music and unforgettable experiences",
     images: [
-      "https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=600&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1506157786151-b8491531f063?w=600&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1459749411175-04bf5292ceea?w=600&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?w=600&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=600&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=600&h=600&fit=crop"
+  "https://i.ibb.co/Gvtf5KyD/4-DD86988-AC82-4-CC7-B254-6-E3911-B4273-F-1-105-c.jpg",
+"https://i.ibb.co/BVFDm491/076-F6088-A438-4-CC8-A1-F3-DBBCDBCE9-C3-F-4-5005-c.jpg",
+"https://i.ibb.co/BKVBkzLP/83-DE61-BB-89-D2-4733-8-F67-DF2-F11468-A94-1-105-c.jpg",
+"https://i.ibb.co/214d3V8C/941-AA4-B9-0819-41-FD-BE22-231-FDA208-D07-1-105-c.jpg",
+"https://i.ibb.co/VYg39QHk/F78849-C5-8222-4-DE4-AAE2-6-EB9-BBC963-C4-4-5005-c.jpg"
+
     ]
   },
   {
     id: 4,
     title: "Sports",
-    thumbnail: "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=600&h=600&fit=crop",
+    thumbnail: "https://i.ibb.co/RpZHcvCK/584778-BE-C72-F-476-C-BD73-05-D910-A35926-1-105-c.jpg",
     description: "Staying active and competitive",
     images: [
-      "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=600&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=600&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1551958219-acbc608c6377?w=600&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1579952363873-27f3bade9f55?w=600&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=600&h=600&fit=crop"
+      "https://i.ibb.co/v6ZBpQJ4/273-F7-D02-FD87-4-A99-BA93-C6-A9-E867-D19-B-1-105-c.jpg",
+"https://i.ibb.co/RpZHcvCK/584778-BE-C72-F-476-C-BD73-05-D910-A35926-1-105-c.jpg",
+"https://i.ibb.co/jksJHwWW/ADAC21-B6-D495-4-D1-F-90-A7-F544-A647-DCBB-1-105-c.jpg",
+"https://i.ibb.co/qFy6HDVM/DB5-A4055-779-E-4-D8-B-9-AD6-47738-F036-BE6-1-105-c.jpg",
+"https://i.ibb.co/L22Wm0S/FAFB2-EE2-9611-4407-ACD6-4-C23-DDAB5-C65-1-105-c.jpg"
+
     ]
   }
 ];

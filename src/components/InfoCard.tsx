@@ -104,7 +104,7 @@ export function InfoCard({ onClose }: InfoCardProps) {
               <span className="px-3 py-1 bg-zinc-800 text-gray-300 rounded text-xs">Software Development</span>
               <span className="px-3 py-1 bg-zinc-800 text-gray-300 rounded text-xs">Product Management</span>
               <span className="px-3 py-1 bg-zinc-800 text-gray-300 rounded text-xs">UI/UX Design</span>
-            </motion.div>
+            </motion.div> 
           </div>
         </div>
 
@@ -212,6 +212,24 @@ export function InfoCard({ onClose }: InfoCardProps) {
                   </div>
                 </div>
               </div>
+             <div>
+                <h3 className="text-white mb-3">Experience</h3>
+                <div className="grid grid-cols-2 gap-4 text-sm">
+                  <div>
+                    <p className="text-gray-400 mb-2">Companies:</p>
+                    <p className="text-gray-300 text-xs leading-relaxed">
+                      Daikin, JP Morgan Chase, Cisco, Living with Robots Lab, Kendra Scott, FinTech Collective, Apovo, OpenWorkspace, FlightDeck, Sweet Times, Codeverse, First Tech Challenge, First Robotics Challenge
+                    </p>
+                  </div>
+                  <div>
+                    <p className="text-gray-400 mb-2">Awards:</p>
+                    <p className="text-gray-300 text-xs leading-relaxed">
+                      Freedman Family Pitch, Freshman Research Initiative Fellowship, FIRST Tech Challenge Dean’s List, Cisco IoT Pitch, FTC Regional 1st Place, NCWIT Regional Affiliate Winner
+                    </p>
+                  </div>
+                </div>
+              </div>
+                
             </div>
 
             {/* Right Column - Skills */}
@@ -250,6 +268,7 @@ export function InfoCard({ onClose }: InfoCardProps) {
                     </span>
                   ))}
                 </div>
+                
               </div>
             </div>
           </div>

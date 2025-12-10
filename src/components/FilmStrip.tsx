@@ -2,6 +2,10 @@ import { motion } from 'motion/react';
 import { useState, useEffect } from 'react';
 
 const images = [
+  {id:1,
+    url: 'https://i.ibb.co/fVfg8Qxm/IMG-9874.jpg',
+    title: 'Memory 1',
+  },
   {
     id: 2,
     url: 'https://i.ibb.co/RGkwB40c/1764651-A-715-E-4-C80-B34-A-8-B4-B8043-DEED-1-105-c.jpg',
@@ -111,7 +115,7 @@ export function FilmStrip() {
   const [spotlightFading, setSpotlightFading] = useState(false);
   
   // Spotlight image (id 3) - calculate initial position to center it
-  const spotlightImageIndex = 1; // id 3 is at index 1
+  const spotlightImageIndex = 2; // id 3 is at index 1
   const imageWidth = 280; // Reduced from 360px
   const gap = 12; // Reduced from 16px
   const initialOffset = -(spotlightImageIndex * (imageWidth + gap)) + (typeof window !== 'undefined' ? window.innerWidth / 2 - imageWidth / 2 : 400);
