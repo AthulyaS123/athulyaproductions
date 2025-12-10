@@ -23,62 +23,66 @@ interface Project {
 }
 
 const projects: Project[] = [
-      {
+  {
     id: 1,
     title: "Equity Risk Score Audit",
-    thumbnail: "public/projects/Screenshot 2025-12-09 at 11.48.05 PM.png",
+    thumbnail: `${import.meta.env.BASE_URL}projects/d.jpeg`,
     videoUrl: "https://www.youtube.com/embed/zhtNhcqTih0",
     description: "Multi-Modal ML for Risk Score Assessment"
   },
-    {
+  {
     id: 2,
-    title: "Pose Data Visulization",
-    thumbnail: "public/projects/Screenshot 2025-12-09 at 10.47.12 PM.png",
+    title: "Pose Data Visualization",
+    thumbnail: `${import.meta.env.BASE_URL}projects/c.jpeg`,
     videoUrl: "https://www.youtube.com/embed/Wen5lScIwGM",
     description: "Real time 3D Pose Estimation and AI Data Metrics"
   },
   {
     id: 3,
     title: "Salesforce AI Engine",
-    thumbnail: "public/projects/Screenshot 2025-12-10 at 1.35.55 PM.png",
+    thumbnail: `${import.meta.env.BASE_URL}projects/e.jpeg`,
     videoUrl: "https://www.youtube.com/embed/q_R21nKuFo8",
     description: "Automated promotion setup, prediction, and recommendation"
   },
   {
     id: 4,
     title: "Fitify",
-    thumbnail: "public/projects/Screenshot 2025-12-09 at 5.07.31 PM.png",
+    thumbnail: `${import.meta.env.BASE_URL}projects/a.jpeg`,
     videoUrl: "https://www.youtube.com/embed/qHhgaujFGtE",
     description: "AI Powered Fashion App"
   },
   {
     id: 5,
     title: "AI/ML/Robotics",
-    thumbnail: "public/projects/Screenshot 2025-12-09 at 5.12.22 PM.png",
+    thumbnail: `${import.meta.env.BASE_URL}projects/b.jpeg`,
     description: "4 Episodes",
     episodes: [
       {
         id: 1,
         title: "RL Agent",
-        thumbnail: "https://images.unsplash.com/photo-1742767069929-0c663150b164?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxyZWluZm9yY2VtZW50JTIwbGVhcm5pbmclMjByb2JvdHxlbnwxfHx8fDE3NjUzMDkyMDB8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+        thumbnail:
+          "https://images.unsplash.com/photo-1742767069929-0c663150b164?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxyZWluZm9yY2VtZW50JTIwbGVhcm5pbmclMjByb2JvdHxlbnwxfHx8fDE3NjUzMDkyMDB8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
         videoUrl: "https://www.youtube.com/embed/l2DG-Y3Q69Y"
       },
       {
         id: 2,
         title: "Pathfinding",
-        thumbnail: "https://images.unsplash.com/photo-1509228468518-180dd4864904?w=400&h=250&fit=crop",
+        thumbnail:
+          "https://images.unsplash.com/photo-1509228468518-180dd4864904?w=400&h=250&fit=crop",
         videoUrl: "https://www.youtube.com/embed/9pZk6KUO7dI"
       },
       {
         id: 3,
         title: "Object Detection",
-        thumbnail: "https://images.unsplash.com/photo-1546440554-353aee3985b8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0cmFmZmljJTIwY2FycyUyMGRldGVjdGlvbnxlbnwxfHx8fDE3NjUzMDkyMDF8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+        thumbnail:
+          "https://images.unsplash.com/photo-1546440554-353aee3985b8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0cmFmZmljJTIwY2FycyUyMGRldGVjdGlvbnxlbnwxfHx8fDE3NjUzMDkyMDF8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
         videoUrl: "https://www.youtube.com/embed/jvuX2wJNvXg"
       },
       {
         id: 4,
         title: "PID",
-        thumbnail: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&h=250&fit=crop",
+        thumbnail:
+          "https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&h=250&fit=crop",
         videoUrl: "https://www.youtube.com/embed/ZTdhinERBz0"
       }
     ]
@@ -86,11 +90,12 @@ const projects: Project[] = [
   {
     id: 6,
     title: "iReflect",
-    thumbnail: "public/projects/forrestmirror.png",
+    thumbnail: `${import.meta.env.BASE_URL}projects/forrestmirror.jpeg`,
     videoUrl: "https://www.youtube.com/embed/jc4m_DrqxCA",
     description: "AI and Design"
   }
 ];
+
 
 export function ProjectsSection() {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
