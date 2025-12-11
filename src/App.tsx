@@ -75,7 +75,7 @@ export default function App() {
           </div>
 
           {/* Genre Buttons */}
-                   <div className="pt-24 pb-16 px-4">
+          <div className="pt-24 pb-16 px-4">
             <p className="text-center text-gray-500 mb-6 tracking-widest uppercase text-sm">
               Top Genres
             </p>
@@ -92,14 +92,11 @@ export default function App() {
                 >
                   {/* Featured Banner */}
                   <span className="relative">About Me</span>
-              <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 bg-red-600 text-white px-2 py-0.5 text-xs tracking-wider rounded shadow-md z-10">
+                  <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 bg-red-600 text-white px-2 py-0.5 text-xs tracking-wider rounded shadow-md z-10">
                     FEATURED
-                    </div>
-                  
+                  </div>
                   
                   <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent rounded-full opacity-0 group-hover:opacity-100 transition-opacity" />
-                  
-                  
                 </button>
 
                 {/* PROJECTS BUTTON */}
@@ -139,18 +136,20 @@ export default function App() {
       {/* Info Card Modal */}
       {showAboutMe && <InfoCard onClose={() => setShowAboutMe(false)} />}
 
-      {/* Footer */}
-      <footer className="w-full text-center text-gray-400 py-10 text-sm tracking-wide mt-20">
-        ©{new Date().getFullYear()} Athulya Productions  
-        <a> | </a>
-        <a
-          href="https://www.linkedin.com/in/athulyasaravanakumar/" target="blank"
-          className="text-gray-300 hover:text-white transition-colors underline underline-offset-2"
-        >
-          LinkedIn
-        </a>
-        <a> | athulyas [dot] work @ gmail [dot] com</a>
-      </footer>
+      {/* Footer – now hidden on Landing Page */}
+      {showFilmStrip && (
+        <footer className="w-full text-center text-gray-400 py-10 text-sm tracking-wide mt-20">
+          ©{new Date().getFullYear()} Athulya Productions  
+          <a> | </a>
+          <a
+            href="https://www.linkedin.com/in/athulyasaravanakumar/" target="blank"
+            className="text-gray-300 hover:text-white transition-colors underline underline-offset-2"
+          >
+            LinkedIn
+          </a>
+          <a> | athulyas [dot] work @ gmail [dot] com</a>
+        </footer>
+      )}
     </div>
   );
 }
