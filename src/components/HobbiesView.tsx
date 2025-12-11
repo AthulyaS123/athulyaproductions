@@ -16,7 +16,7 @@ const hobbies: Hobby[] = [
     id: 1,
     title: "Travel Adventures",
     thumbnail: `${import.meta.env.BASE_URL}hobbies/travel/BB95E464-458E-4B1C-9F52-6ED9BAA2E8B3_4_5005_c.jpeg`,
-    description: "Fun Fact: Traveled to 6 countries in 3 weeks!  (Almost died hiking up a volcano at 2am haha). I love exploring new cultures and learning about different perspectives of life. I am a life long learner, so every person I meet is a valuable.",
+    description: "Fun Fact: Traveled to 6 countries in 3 weeks! I love exploring new cultures and learning about different perspectives of life. I am a life long learner, so every person I meet is valuable.",
     images: [
       `${import.meta.env.BASE_URL}hobbies/travel/45EB8450-CFB7-4BB8-8DFC-1C76BF8F26AA_4_5005_c.jpeg`,
       `${import.meta.env.BASE_URL}hobbies/travel/360F6F31-31EA-41B1-A64E-36370136E442_1_105_c.jpeg`,
@@ -35,7 +35,7 @@ const hobbies: Hobby[] = [
     id: 2,
     title: "Food",
     thumbnail: `${import.meta.env.BASE_URL}hobbies/food/9DD162A8-B6E1-4A1A-8AC6-32F6824608EE_1_105_c.jpeg`,
-    description: "Who doesn't love to eat! My favorite restaurants is Thai Siam and I have gone there 312 times.",
+    description: "Who doesn't love to eat! My favorite restaurants is Thai Siam and I have gone there 312 times. I am the friend that always carries a snack, so you will never go hungry!",
     images: [
       `${import.meta.env.BASE_URL}hobbies/food/2A9ED195-76A8-44A9-ABCE-BFB467DE75DA_1_105_c.jpeg`,
       `${import.meta.env.BASE_URL}hobbies/food/3A2EE495-E8A1-44AA-B5CD-D4CCF5612CA3_4_5005_c.jpeg`,
@@ -49,7 +49,7 @@ const hobbies: Hobby[] = [
     id: 3,
     title: "Music",
     thumbnail: `${import.meta.env.BASE_URL}hobbies/music/941AA4B9-0819-41FD-BE22-231FDA208D07_1_105_c.jpeg`,
-    description: "Music keeps me going. It makes me connect to my emotions and those around me.",
+    description: "Music is a language everyone can understand. It makes me connect to my emotions and those around me. Favorite genre is indie music!",
     images: [
       `${import.meta.env.BASE_URL}hobbies/music/0D1B4014-2FAD-4EBA-8A0E-F8A3D0806686_1_105_c.jpeg`,
       `${import.meta.env.BASE_URL}hobbies/music/2C0BF5C8-39EF-4CFE-9DA0-19AA75EF63FA_4_5005_c.jpeg`,
@@ -62,7 +62,7 @@ const hobbies: Hobby[] = [
     id: 4,
     title: "Sports",
     thumbnail: `${import.meta.env.BASE_URL}hobbies/sports/9A70C068-645D-4CC6-9A21-582224E26694_4_5005_c.jpeg`,
-    description: "Whether it's watching or playing sports, I am very spirited. GO LONGHORNS!",
+    description: "Whether it's watching or playing sports, I am very spirited. I used to do basketball and track. I now currently play pickleball. GO LONGHORNS!",
     images: [
       `${import.meta.env.BASE_URL}hobbies/sports/2C2CFDD3-78D2-4E02-ACD3-6BDFF11FB30C_4_5005_c.jpeg`,
       `${import.meta.env.BASE_URL}hobbies/sports/773CD0B7-8149-447E-BEF3-08B9F91589A2_4_5005_c.jpeg`,
